@@ -1,11 +1,15 @@
 # Rack::EnsureProperHost [![Build Status](https://secure.travis-ci.org/citrus/rack-ensure_proper_host.png)](http://travis-ci.org/citrus/rack-ensure_proper_host)
 
+Inspired by [rack-no-www](https://github.com/logicaltext/rack-no-www).
 
 ------------------------------------------------------------------------------
 Usage
 ------------------------------------------------------------------------------
 
+All of these examples will redirect all requests from *.example.com to example.com. Requests to secure.example.com will remain untouched.
+
 Rack::EnsureProperHost is middleware. Use it like this in your rack applications:
+
 
 ### Rails
 
@@ -45,6 +49,7 @@ require 'rack/ensure_proper_host'
 use Rack::EnsureProperHost, %w(example.com secure.example.com)
 run YourApp.new
 ```
+
 
 
 ------------------------------------------------------------------------------
